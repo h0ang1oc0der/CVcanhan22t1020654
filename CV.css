@@ -1,0 +1,156 @@
+:root {
+  --accent: #2b6cb0;
+  --muted: #556;
+  --card-bg: #fff;
+  --page-bg: #f4f7fb;
+  --maxw: 900px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--page-bg);
+  color: #0b1220;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 28px auto;
+  padding: 24px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(15,23,42,0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 28px rgba(15,23,42,0.15);
+}
+
+/* Header */
+header {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  align-items: center;
+  background: linear-gradient(135deg, #f9fbfd, #eef4fa);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+p.lead {
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+/* Layout chính */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  padding: 24px;
+}
+
+aside section p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+section {
+  margin-bottom: 18px;
+}
+.section-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--accent);
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+/* Skills */
+.skill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef6ff;
+  margin: 6px 6px 0 0;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+.skill:hover {
+  background: #d6e9ff;
+}
+
+/* Contact */
+.contact a {
+  display: inline-block;
+  margin-right: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact a:hover {
+  color: #1a4f91;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  padding: 18px 24px;
+  background: #fbfdff;
+  border-top: 1px solid #eef3fb;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #1a4f91;
+}
